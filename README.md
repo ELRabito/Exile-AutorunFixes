@@ -10,13 +10,13 @@ This fixes several exploits related to the autorun.
 
 # Installation
 
-1. Create two customcode overrides for ExileClient_system_autoRun_canAutoRun.sqf and ExileClient_system_autoRun_stop.sqf.
+1. Create two customcode overrides for ExileClient_system_autoRun_canAutoRun.sqf and ExileClient_system_autoRun_stop.sqf with the code from github.
+
 2. Add this to your init.sqf in your missionfile.
 
 		WeaponHolsterAutoRunBlock = false;
 	
 3. Make a new override for ExileClient_gui_hud_event_onKeyUp.sqf or change the existing one. (Name can be different if you use Vectorbuilding etc.)
-
 
 4. Search for this part.
 
@@ -29,7 +29,7 @@ This fixes several exploits related to the autorun.
 			};
 		};
 
-Change to:
+And change it to:
 	
 	case 0x20:
 	{
@@ -73,7 +73,7 @@ Change to:
 			};
 			_stopPropagation = true;
 		};
-And change to
+And change it to:
 
 	case 0x05: 	
 	{ 
