@@ -10,7 +10,7 @@
 3. Make a new override for ExileClient_gui_hud_event_onKeyUp.sqf or change the existing one. (Name can be different if you use Vectorbuilding etc.)
 
 
-Search for this part.
+4. Search for this part.
 
 	case 0x20:
 		{
@@ -31,4 +31,37 @@ Change to:
 			[] spawn {WeaponHolsterAutoRunBlock = true; sleep 2.5; WeaponHolsterAutoRunBlock = false;};
 			_stopPropagation = true; 
 		};
+	};
+
+5. Seach for this second part
+
+	case 0x05: 	
+	{ 
+		if !(ExileClientIsHandcuffed || ExileIsPlayingRussianRoulette) then 
+		{
+			if (ExileClientIsInConstructionMode) then
+			{
+				if !(ExileClientConstructionKitClassName isEqualTo "Exile_Item_Flag") then 
+				{
+					ExileClientConstructionModePhysx = !ExileClientConstructionModePhysx;
+					[] call ExileClient_gui_constructionMode_update;
+				};
+			}
+			else
+			{
+				if (currentWeapon player != "") then
+				{
+					ExileClientPlayerHolsteredWeapon = currentWeapon player;
+					player action["switchWeapon", player, player, 100];
+				}
+				else 
+				{
+					if (ExileClientPlayerHolsteredWeapon != "") then
+					{
+						player selectWeapon ExileClientPlayerHolsteredWeapon;
+					};
+				};
+			};
+		};
+		_stopPropagation = true;
 	};
