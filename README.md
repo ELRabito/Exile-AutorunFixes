@@ -75,7 +75,7 @@ Change to:
 		};
 And change to
 
-			case 0x05: 	
+	case 0x05: 	
 	{ 
 		if !(ExileClientIsHandcuffed || ExileIsPlayingRussianRoulette) then 
 		{
