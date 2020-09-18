@@ -12,7 +12,7 @@
 
 4. Search for this part.
 
-	case 0x20:
+		case 0x20:
 		{
 			if (ExileClientIsAutoRunning) then
 			{
