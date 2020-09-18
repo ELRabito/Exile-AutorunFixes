@@ -5,7 +5,7 @@ This fixes several exploits related to the autorun.
 - Disables Autorun while playing russian roulette.
 - Disables Autorun while in Combat. (Remove the first If statement (ExileClientPlayerIsInCombat) if you don't want to disable autorun in combat)
 - Disables Autorun while doing certain animations to fix a animation skipping exploit.
-- "Fixe"s the "slide" bug while holstering a weapon and pressing autorun.
+- "Fixes" the "slide" bug while holstering a weapon and pressing autorun.
 - "Fixes" the instant weapon draw while pressing 1 or 2 while autorunning and then pressing a movement button. 
 
 # Installation
