@@ -1,8 +1,15 @@
 # Exile-AutorunFixes
 
+# Installation
+
+1. Create two customcode overrides for A and B.
+2. Add this to your initplayerlocal.sqf
+	
+	WeaponHolsterAutoRunBlock = false;
+
+3. Make a new override for ExileClient_gui_hud_event_onKeyUp.sqf or change the existing one. (Name can be different if you use Vectorbuilding etc.)
 
 
-ExileClient_gui_hud_event_onKeyUp.sqf
 Search for this part.
 
 	case 0x20:
