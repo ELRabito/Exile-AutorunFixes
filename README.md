@@ -41,7 +41,7 @@ And change it to:
 		};
 	};
 
-5. Seach for this second part
+5. Search for this second part
 
 		case 0x05: 	
 		{ 
