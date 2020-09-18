@@ -2,8 +2,8 @@
 
 # Installation
 
-1. Create two customcode overrides for A and B.
-2. Add this to your initplayerlocal.sqf
+1. Create two customcode overrides for ExileClient_system_autoRun_canAutoRun.sqf and ExileClient_system_autoRun_stop.sqf.
+2. Add this to your init.sqf in your missionfile.
 
 	WeaponHolsterAutoRunBlock = false;
 	
