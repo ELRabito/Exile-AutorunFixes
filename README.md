@@ -36,7 +36,7 @@ And change it to:
 		if (ExileClientIsAutoRunning) then
 		{
 			call ExileClient_system_autoRun_stop;
-			[] spawn {WeaponHolsterAutoRunBlock = true; sleep 2.5; WeaponHolsterAutoRunBlock = false;};
+			[] spawn {WeaponHolsterAutoRunBlock = true; sleep 3; WeaponHolsterAutoRunBlock = false;};
 			_stopPropagation = true; 
 		};
 	};
@@ -93,14 +93,14 @@ And change it to:
 				{
 					ExileClientPlayerHolsteredWeapon = currentWeapon player;
 					player action["switchWeapon", player, player, 100];
-					[] spawn {WeaponHolsterAutoRunBlock = true; sleep 2.5; WeaponHolsterAutoRunBlock = false;};
+					[] spawn {WeaponHolsterAutoRunBlock = true; sleep 3; WeaponHolsterAutoRunBlock = false;};
 				}
 				else 
 				{
 					if (ExileClientPlayerHolsteredWeapon != "") then
 					{
 						player selectWeapon ExileClientPlayerHolsteredWeapon;
-						[] spawn {WeaponHolsterAutoRunBlock = true; sleep 2.5; WeaponHolsterAutoRunBlock = false;};
+						[] spawn {WeaponHolsterAutoRunBlock = true; sleep 3; WeaponHolsterAutoRunBlock = false;};
 					};
 				};
 			};
