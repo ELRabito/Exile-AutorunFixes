@@ -1,6 +1,6 @@
 # Exile-AutorunFixes
 
-This fixes several exploits related to the autorun.
+This fixes several bug and exploits related to the autorun.
 - Disables Autorun in Territory. (VG exploit)
 - Disables Autorun while playing russian roulette.
 - Disables Autorun while in Combat. Remove the first If statement in ExileClient_system_autoRun_canAutoRun if you don't want to disable autorun in combat!
