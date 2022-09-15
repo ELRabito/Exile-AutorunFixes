@@ -13,6 +13,10 @@ private["_canAutoRun"];
 _canAutoRun = true;
 try 
 {
+	if(!isnull (uiNamespace getVariable ["RscExileCameraView",displayNull])) then
+	{
+		throw false;
+	};
 	if (ExileClientPlayerIsInCombat) then
 	{
 		throw false;
